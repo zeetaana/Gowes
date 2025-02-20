@@ -1,0 +1,88 @@
+.Activity-title {
+  background: linear-gradient(90deg, #004b74 0%, #41c9e2 71%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.activity {
+  max-width: 80rem;
+  margin: auto;
+  --slide-height: 23rem;
+  --slide-spacing: 1rem;
+  --slide-size: 33%;
+}
+.activity__viewport {
+  overflow: hidden;
+}
+.activity__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.activity__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.activity__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
+}
+.activity__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1.2rem;
+}
+.activity__dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.activity__dot {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #333; /* Atur ke warna yang sesuai dengan tema */
+  width: 0.5rem;
+  height: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.activity__dot:after {
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
+  background-color: #ccc; /* Tambahkan warna latar agar lebih jelas */
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: "";
+}
+.activity__dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem #555; /* Ubah ke warna yang lebih kontras */
+  background-color: #333; /* Tambahkan warna latar untuk yang terpilih */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}

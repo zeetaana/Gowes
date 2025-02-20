@@ -1,0 +1,53 @@
+import React from "react";
+import { Icon } from "@iconify/react";
+
+const Navbar = () => {
+  return (
+    <div>
+      <div className="w-full py-4 px-20 bg-white">
+        <div className="flex items-center justify-between">
+          <a href="/" className="flex items-center">
+            <img
+              src="/assets/Logo/Logo Gowes.svg"
+              className="w-[77px] h-[70px] mr-3"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <div className="nav-item flex gap-5 poppins-medium ml-20">
+            <a href="#" className="nav-link">
+              Home
+            </a>
+            <a href="#About" className="nav-link">
+              About Us
+            </a>
+            <a href="#Activity" className="nav-link">
+              Activity
+            </a>
+            <a href="#Service" className="nav-link">
+              Service
+            </a>
+            <a href="#" className="nav-link">
+              Contact
+            </a>
+          </div>
+          <div className="flex gap-4">
+            <a href="https://www.instagram.com/mutii_rii/profilecard/?igsh=azc3MnZoMWNkb205">
+              <Icon icon="basil:instagram-solid" className="text-4xl" />
+            </a>
+            <a href="#">
+              <Icon icon="basil:youtube-solid" className="text-4xl" />
+            </a>
+            <a href="#">
+              <Icon icon="basil:facebook-solid" className="text-4xl" />
+            </a>
+            <a href="#">
+              <Icon icon="basil:twitter-solid" className="text-4xl" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
